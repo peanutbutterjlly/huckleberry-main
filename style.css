@@ -1,0 +1,69 @@
+:root {
+  /* primary is green */
+  --primary: hsl(160deg, 100%, 30%);
+  /* secondary is gold */
+  --secondary-lighter: hsl(45deg, 100%, 50%);
+  --secondary-darker: hsl(45deg, 100%, 40%);
+  /* grays */
+  --black: hsl(0deg, 0%, 0%);
+  --very-dark: hsl(0deg, 0%, 10%);
+  --dark: hsl(0deg, 0%, 30%);
+  --medium: hsl(0deg, 0%, 40%);
+  --light: hsl(0deg, 0%, 60%);
+  --white: hsl(0deg, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+strong {
+  color: var(--primary);
+}
+
+h2 {
+  background-color: var(--secondary-lighter);
+  display: inline-block;
+  padding: 1rem 2rem;
+}
+
+main {
+  background: var(--medium);
+  border-top: 8px solid var(--light);
+}
+
+:where(main, header) {
+  padding-block: 2.5rem;
+}
+
+.max-width-wrapper {
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+.intro-chunk {
+  max-width: 24rem;
+}
+
+.card {
+  background-color: var(--white);
+  border-bottom: 8px solid var(--light);
+}
+
+:where(.intro-chunk, .card) {
+  padding: 1rem;
+}
+
+.indented-heading {
+  border-bottom: 8px solid var(--secondary-darker);
+  margin-left: -2rem;
+  margin-bottom: 0px;
+}
